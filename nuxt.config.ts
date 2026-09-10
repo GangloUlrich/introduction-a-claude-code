@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/css/main.css'],
   app: {
+    // GitHub Pages project sites are served from /<repo-name>/, so the
+    // deploy workflow sets NUXT_APP_BASE_URL to that path at build time.
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       title: 'D.Nova — Personal Portfolio Website',
       link: [
