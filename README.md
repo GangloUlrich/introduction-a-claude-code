@@ -1,75 +1,40 @@
-# Nuxt Minimal Starter
+# D.Nova — Personal Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Single-page personal portfolio built with **Nuxt 4** and **Tailwind CSS**, integrating the
+["Personal Portfolio Website Design"](https://dribbble.com/shots/24978876-Personal-Portfolio-Website-Design)
+shot from Dribbble section by section.
+
+- **Live site**: https://gangloulrich.github.io/introduction-a-claude-code/
+- **Build report (Notion)**: https://app.notion.com/p/3d77e5a51249816fb893ed2faa9d0d0d?pvs=204
+- **Build report (illustrated)**: https://claude.ai/code/artifact/1561e219-df5d-4a5c-94e9-7814d7552335
+- **Design source**: https://dribbble.com/shots/24978876-Personal-Portfolio-Website-Design
+- **Image credits**: see [CREDITS.md](./CREDITS.md)
 
 ## Setup
 
-Make sure to install dependencies:
-
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm install --legacy-peer-deps
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Development
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Starts the dev server on `http://localhost:3000`.
 
-Build the application for production:
+## Production build
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+npm run generate
 ```
 
-Locally preview production build:
+Generates the static site into `.output/public`.
 
-```bash
-# npm
-npm run preview
+## Deployment
 
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Every push to `main` triggers `.github/workflows/deploy.yml`, which runs `nuxt generate` and
+publishes `.output/public` to GitHub Pages via `actions/deploy-pages`. The base path is
+auto-detected from the repository name (`/` for a `<user>.github.io` repo, `/<repo-name>/`
+otherwise).

@@ -1,4 +1,11 @@
-# Image credits
+# Credits
+
+## Design
+
+The layout is based on the ["Personal Portfolio Website Design"](https://dribbble.com/shots/24978876-Personal-Portfolio-Website-Design)
+shot on Dribbble.
+
+## Images
 
 All photos are sourced from [Unsplash](https://unsplash.com) and used under the
 [Unsplash License](https://unsplash.com/license). URLs are built dynamically from
