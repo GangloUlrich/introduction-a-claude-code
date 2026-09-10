@@ -18,6 +18,12 @@ const stats = [
         >
           Product designer
         </span>
+        <span class="hidden md:block absolute -left-[7px] top-24 bottom-20 w-px bg-line" aria-hidden="true" />
+        <span
+          class="hidden md:block absolute -left-2 bottom-14 origin-left -rotate-90 text-[10px] tracking-widest text-muted whitespace-nowrap"
+        >
+          2024
+        </span>
 
         <div class="flex items-center gap-8 mb-8">
           <div v-for="stat in stats" :key="stat.label">
